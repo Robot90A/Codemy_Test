@@ -45,6 +45,7 @@ public class CodemyServiceImp implements CodemyService {
 			
 			EstanteriaDTO dto = codemyMapper.estanteDTO(estanterias2);
 			estanteriaDTOs.add(dto);
+
 			
 		}
 		
@@ -76,11 +77,13 @@ public class CodemyServiceImp implements CodemyService {
 			
 			LibroDTO libroDTO = codemyMapper.libroDTO(miLibro);
 			listalibrosDTO.add(libroDTO);
+
+
 			
 		
 		}
 		
-		return listalibrosDTO ;
+		return listalibrosDTO;
 	}
 
 
@@ -107,6 +110,8 @@ public class CodemyServiceImp implements CodemyService {
 			
 			PaginaDTO paginaDTO = codemyMapper.PaginaDTO(Listpagina);
 			listapaginaDTO.add(paginaDTO);
+
+
 			
 		}
 		

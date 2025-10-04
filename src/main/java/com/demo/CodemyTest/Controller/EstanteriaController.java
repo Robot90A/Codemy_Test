@@ -14,32 +14,24 @@ import com.demo.CodemyTest.Service.CodemyService;
 @RequestMapping("/estanteria")
 @RestController
 public class EstanteriaController {
-	
+
 	private final CodemyService codemyService;
-	
+
 	public EstanteriaController(CodemyService codemyService) {
-		
+
 		this.codemyService = codemyService;
 	}
-	
-	
+
 	@GetMapping("/listaEstantes")
-	public ResponseEntity<List<EstanteriaDTO>> ListaEstanteriasDTO(){
-		
+	public ResponseEntity<List<EstanteriaDTO>> ListaEstanteriasDTO() {
+
 		return ResponseEntity.ok(codemyService.obtenerTodaslasEstanterias());
 	}
-	
 
 	@GetMapping("/buscarEstantePorID/{id}")
-	public ResponseEntity<EstanteriaDTO> BuscarEstanteriaPorID(@PathVariable Long id){
-		
+	public ResponseEntity<EstanteriaDTO> BuscarEstanteriaPorID(@PathVariable Long id) {
+
 		return ResponseEntity.ok(codemyService.obtenerEstanteriaPorID(id));
 	}
-	
-	
-	
-	
-	
-	
 
 }

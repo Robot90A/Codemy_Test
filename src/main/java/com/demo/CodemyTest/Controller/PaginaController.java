@@ -13,39 +13,25 @@ import com.demo.CodemyTest.Service.CodemyService;
 @RequestMapping("/pagina")
 @RestController
 public class PaginaController {
-	
+
 	private final CodemyService codemyService;
-	
+
 	public PaginaController(CodemyService codemyService) {
-		
+
 		this.codemyService = codemyService;
 	}
-	
-	
+
 	@GetMapping("/listaPaginas")
-	public ResponseEntity<List<PaginaDTO>> listaPaginaDTO(){
-		
+	public ResponseEntity<List<PaginaDTO>> listaPaginaDTO() {
+
 		return ResponseEntity.ok(codemyService.obtenerTodasLasPaginas());
-		
+
 	}
-	
-	
+
 	@GetMapping("/buscarPaginaPorID/{id}")
-	public ResponseEntity<PaginaDTO> BuscarPaginaPorID(@PathVariable Long id){
-		
+	public ResponseEntity<PaginaDTO> BuscarPaginaPorID(@PathVariable Long id) {
+
 		return ResponseEntity.ok(codemyService.obtenerPaginasPorID(id));
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 
 }
